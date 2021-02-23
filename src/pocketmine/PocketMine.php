@@ -13,7 +13,7 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * @author Glowstone (Lemdy)
+ * @author Glowstone (Lemdy/Lunarelly)
  * @link vk.com/weany
  *
  */
@@ -73,7 +73,7 @@ namespace pocketmine {
 
 	const VERSION = "3.2.0";
 	const API_VERSION = "2.0.0";
-	const CODENAME = "Lemdy";
+	const CODENAME = "Lunarelly";
 	const MINECRAFT_VERSION = "0.14";
 	const MINECRAFT_VERSION_NETWORK = "";
 	const GLOWSTONE_API_VERSION = "1.0.0";
