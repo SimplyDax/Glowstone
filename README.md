@@ -8,7 +8,7 @@
 - Run via ./start.sh
 
 ## Donate
-- QIWI: qiwi.com/n/LEMDY
+- QIWI: https://qiwi.com/n/LEMDY
 
 ## Information
 - VK: https://vk.com/weany
