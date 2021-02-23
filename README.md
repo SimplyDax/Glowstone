@@ -4,7 +4,8 @@
 
 ## Installation
 - Download PHP 7 libaries
-- Download and unzip core
+- Download git
+- Clone via command: git clone https://github.com/Lunarelly/Glowstone
 - Run via ./start.sh
 
 ## Donate
