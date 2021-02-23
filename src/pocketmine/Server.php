@@ -1749,7 +1749,7 @@ class Server{
 		   §fVersion: §e" . $this->getPocketMineVersion() . "
 		   §fMCPE: §e" . \pocketmine\MINECRAFT_VERSION . "
 		   §fOS: §e" . $oserver . "
-		   §fAuthor: §eLemdy
+		   §fAuthor: §eLunarelly (Lemdy)
 		   §fContact: §evk.com/weany
 		   \n";
 
