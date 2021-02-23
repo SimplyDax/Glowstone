@@ -15,4 +15,4 @@
 - Version: 0.14.x
 
 ## Licensing information
-Glowstone are not affiliated with Mojang. All brands and trademarks belong to their respective owners.
+Glowstone is not affiliated with Mojang. All brands and trademarks belong to their respective owners.
