@@ -11,8 +11,15 @@
 - QIWI: https://qiwi.com/n/LEMDY
 
 ## Information
+- Minecraft PE version: 0.14.x
+- Supported protocols: 41, 42, 43, 44, 45, 46, 60, 70
+- API: 2.0.0
+
+## Contacts
 - VK: https://vk.com/weany
-- Version: 0.14.x
+- Telegram: @ducxy
+- Discord: Lunarelly#4392
+- VK Group: https://vk.com/glowstonepe
 
 ## Licensing information
 Glowstone is not affiliated with Mojang. All brands and trademarks belong to their respective owners.
