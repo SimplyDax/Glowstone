@@ -10,5 +10,9 @@
 ## Donate
 - QIWI: qiwi.com/n/LEMDY
 
+## Information
+- VK: https://vk.com/weany
+- Version: 0.14.x
+
 ## Licensing information
 Glowstone are not affiliated with Mojang. All brands and trademarks belong to their respective owners.
