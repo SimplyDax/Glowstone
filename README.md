@@ -27,6 +27,8 @@
 - Fixed some bugs
 - Fixes "crashing" blocks
 - Support 1-7 builds (beta)
+- Fixed 0.14.2 popup bug
+- Fixed armor
 
 ## Contacts
 - VK: https://vk.com/weany
