@@ -25,7 +25,7 @@
 - Less weight
 - Fast startup
 - Fixed some bugs
-- Fixes "crashing" blocks
+- Fixed "crashing" blocks
 - Support 1-7 builds (beta)
 - Fixed 0.14.2 popup bug
 - Fixed armor
