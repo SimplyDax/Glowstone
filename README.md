@@ -16,6 +16,18 @@
 - Supported protocols: 41, 42, 43, 44, 45, 46, 60, 70
 - API: 2.0.0
 
+## Features
+- Method "getPing()" returns player's ping
+- Method "getCPS()" returns player's clicks per second
+- Command "/ping" shows your ping
+- Anti-DoS protection (Flood UDP)
+- Nicks like "John gamer1" are now allowed
+- Less weight
+- Fast startup
+- Fixed some bugs
+- Fixes "crashing" blocks
+- Supported 1-7 builds (beta)
+
 ## Contacts
 - VK: https://vk.com/weany
 - Telegram: @ducxy
