@@ -26,7 +26,7 @@
 - Fast startup
 - Fixed some bugs
 - Fixes "crashing" blocks
-- Supported 1-7 builds (beta)
+- Support 1-7 builds (beta)
 
 ## Contacts
 - VK: https://vk.com/weany
