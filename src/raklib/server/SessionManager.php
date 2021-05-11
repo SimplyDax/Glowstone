@@ -13,7 +13,7 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * @author Glowstone (Lemdy)
+ * @author Glowstone (Lunarelly)
  * @link vk.com/weany
  *
  */
@@ -67,7 +67,7 @@ class SessionManager{
 
 	protected $name = "";
 
-	protected $packetLimit = 140;
+	protected $packetLimit = 150; // limit will fix some one-thread flooders
 
 	protected $shutdown = false;
 
