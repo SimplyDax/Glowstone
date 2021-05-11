@@ -70,6 +70,7 @@ namespace pocketmine {
 	use pocketmine\utils\Terminal;
 	use pocketmine\utils\Utils;
 	use pocketmine\wizard\Installer;
+	use pocketmine\Server;
 
 	const VERSION = "3.2.0";
 	const API_VERSION = "2.0.0";
@@ -107,6 +108,11 @@ namespace pocketmine {
 		require_once(\pocketmine\PATH . "src/spl/ClassLoader.php");
 		require_once(\pocketmine\PATH . "src/spl/BaseClassLoader.php");
 		require_once(\pocketmine\PATH . "src/pocketmine/CompatibleClassLoader.php");
+	}
+	
+	if(Server::getInstance()->getName() !== "Glowstone") {
+		echo "[Glowstone] Unable to start. Server name doesn't match original." . PHP_EOL;
+		exit(1);
 	}
 
 	$autoloader = new CompatibleClassLoader();
