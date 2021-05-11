@@ -425,7 +425,7 @@ class Server{
 	/**
 	 * @return string
 	 */
-	public function getLemdyApiVersion(){
+	public function getLunarellyApiVersion(){
 		return \pocketmine\GLOWSTONE_API_VERSION;
 	}
 
@@ -1749,7 +1749,7 @@ class Server{
 		   §fVersion: §e" . $this->getPocketMineVersion() . "
 		   §fMCPE: §e" . \pocketmine\MINECRAFT_VERSION . "
 		   §fOS: §e" . $oserver . "
-		   §fAuthor: §eLunarelly (Lemdy)
+		   §fAuthor: §eLunarelly
 		   §fContact: §evk.com/weany
 		   \n";
 
