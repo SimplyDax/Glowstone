@@ -383,7 +383,7 @@ class Server{
 	 * @return string
 	 */
 	public function getName() : string{
-		return "Glowstone";
+		return \pocketmine\SERVER_NAME;
 	}
 
 	/**
