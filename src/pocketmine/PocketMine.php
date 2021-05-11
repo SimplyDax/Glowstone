@@ -110,7 +110,7 @@ namespace pocketmine {
 		require_once(\pocketmine\PATH . "src/pocketmine/CompatibleClassLoader.php");
 	}
 	
-	if(SERVER_NAME !== "Glowstone") {
+	if(SERVER_NAME !== "Glowstone"){
 		echo "[Glowstone] Unable to start. Server name doesn't match original." . PHP_EOL;
 		exit(1);
 	}
