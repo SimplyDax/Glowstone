@@ -72,11 +72,11 @@ namespace pocketmine {
 	use pocketmine\wizard\Installer;
 
 	const SERVER_NAME = "Glowstone";
-	const VERSION = "3.2.0";
+	const VERSION = "3.2.5";
 	const API_VERSION = "2.0.0";
 	const CODENAME = "Lunarelly";
 	const MINECRAFT_VERSION = "0.14";
-	const MINECRAFT_VERSION_NETWORK = "";
+	const MINECRAFT_VERSION_NETWORK = "0.14.3";
 	const GLOWSTONE_API_VERSION = "1.0.0";
 
 	/*
