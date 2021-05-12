@@ -313,21 +313,21 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 	return $this->cps[time()];
 	}
 	
-    public function addCPS(){
-	$cps = $this->getCPS();
-                   $cps++;
-                   foreach($this->cps as $t => $cps){
-                   	if($t != time()){
-                   	unset($this->cps[$t]);
-                   	}
-                   	}
-                   $this->cps[time()] = $cps;
+        public function addCPS(){
+	  $cps = $this->getCPS();
+          $cps++;
+          foreach($this->cps as $t => $cps){
+              if($t != time()){
+              unset($this->cps[$t]);
+              }
+	  }
+          $this->cps[time()] = $cps;
 	}
 	
 	/** Warning: not done yet */
-    public function getLocale(){
-        return $this->locale;
-    }
+        public function getLocale(){
+           return $this->locale;
+        }
 
 	public function linkHookToPlayer(FishingHook $entity){
 		if($entity->isAlive()){
@@ -2569,13 +2569,13 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 
 				if(!in_array($packet->protocol1, ProtocolInfo::ACCEPTED_PROTOCOLS)){
 					if($packet->protocol1 < ProtocolInfo::CURRENT_PROTOCOL){
-						$message = "§c» §fСервер §eподдерживает §fверсию: §b0.14";
+						$message = "§fСервер §eподдерживает §fверсию: §b0.14";
 
 						$pk = new PlayStatusPacket();
 						$pk->status = PlayStatusPacket::LOGIN_FAILED_CLIENT;
 						$this->directDataPacket($pk);
 					}else{
-						$message = "§c» §fСервер §eподдерживает §fверсию: §b0.14";
+						$message = "§fСервер §eподдерживает §fверсию: §b0.14";
 
 						$pk = new PlayStatusPacket();
 						$pk->status = PlayStatusPacket::LOGIN_FAILED_SERVER;
@@ -2600,7 +2600,7 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 				}
 				for($i = 0; $i < $len and $valid; ++$i){
 					$c = ord($packet->username{$i});
-					if(($c >= ord("a") and $c <= ord("z")) or ($c >= ord("A") and $c <= ord("Z")) or ($c >= ord("0") and $c <= ord("9")) or $c === ord("_") or $c === ord(" ")){
+					if(($c >= ord("a") and $c <= ord("z")) or ($c >= ord("A") and $c <= ord("Z")) or ($c >= ord("0") and $c <= ord("9")) or $c === ord("_")){
 						continue;
 					}
 
@@ -2609,13 +2609,13 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 				}
 
 				if(!$valid or $this->iusername === "rcon" or $this->iusername === "console"){
-					$this->close("", "§c» §fНедопустимый ник!");
+					$this->close("", "§fНедопустимый §eник§f!");
 
 					break;
 				}
 
 				if((strlen($packet->skin) != 64 * 64 * 4) and (strlen($packet->skin) != 64 * 32 * 4)){
-					$this->close("", "§c» §fНеверный §bформат §fскина!");
+					$this->close("", "§fНеверный §bформат §fскина!");
 
 					break;
 				}
