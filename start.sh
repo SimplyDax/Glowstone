@@ -32,12 +32,12 @@ if [ "$PHP_BINARY" == "" ]; then
 fi
 
 if [ "$POCKETMINE_FILE" == "" ]; then
-	if [ -f ./PocketMine-MP.phar ]; then
+	if [ -f ./src/pocketmine/PocketMine.php ]; then
 		POCKETMINE_FILE="./src/pocketmine/PocketMine.php"
-	elif [ -f ./MixCore.phar ]; then
+	elif [ -f ./Glowstone.phar ]; then
 		POCKETMINE_FILE="./Glowstone.phar"
-	elif [ -f ./src/pocketmine/PocketMine.php ]; then
-		POCKETMINE_FILE="./PocketMine.phar"
+	elif [ -f ./PocketMine-MP.phar ]; then
+		POCKETMINE_FILE="./PocketMine-MP.phar"
 	else
 		echo "Glowstone not found"
 		exit 1
