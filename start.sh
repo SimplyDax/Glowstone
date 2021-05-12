@@ -32,8 +32,12 @@ if [ "$PHP_BINARY" == "" ]; then
 fi
 
 if [ "$POCKETMINE_FILE" == "" ]; then
-	if [ -f ./src/pocketmine/PocketMine.php ]; then
+	if [ -f ./PocketMine-MP.phar ]; then
 		POCKETMINE_FILE="./src/pocketmine/PocketMine.php"
+	elif [ -f ./MixCore.phar ]; then
+		POCKETMINE_FILE="./Glowstone.phar"
+	elif [ -f ./src/pocketmine/PocketMine.php ]; then
+		POCKETMINE_FILE="./PocketMine.phar"
 	else
 		echo "Glowstone not found"
 		exit 1
@@ -50,9 +54,9 @@ if [ "$DO_LOOP" == "yes" ]; then
 			echo "Restarted $LOOPS times"
 		fi
 		"$PHP_BINARY" "$POCKETMINE_FILE" $@
-		echo "Stop - CTRL+C"
+		echo "Stop - CTRL + C"
 		echo ""
-		sleep 5
+		sleep 3
 		((LOOPS++))
 	done
 else
