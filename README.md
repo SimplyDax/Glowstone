@@ -21,7 +21,6 @@
 - Method "getCPS()" returns player's clicks per second
 - Command "/ping" shows your ping
 - Anti-DoS protection (Flood UDP)
-- Nicks like "John gamer1" are now allowed
 - Less weight
 - Fast startup
 - Fixed some bugs
