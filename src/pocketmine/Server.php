@@ -1749,7 +1749,7 @@ class Server{
 		   §fMCPE: §e" . \pocketmine\MINECRAFT_VERSION . "
 		   §fOS: §e" . $oserver . "
 		   §fAuthor: §eLunarelly
-		   §fContact: §evk.com/weany
+		   §fContact: §evk.com/lunarelly
 		   \n";
 
 			$this->about();
