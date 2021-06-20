@@ -30,7 +30,7 @@
 - Fixed armor
 
 ## Contacts
-- VK: https://vk.com/weany
+- VK: https://vk.com/lunarelly
 - Telegram: t.me/ducxy
 - Discord: Lunarelly#4392
 - VK Group: https://vk.com/glowstonepe
