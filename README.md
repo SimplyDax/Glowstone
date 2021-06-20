@@ -32,7 +32,7 @@
 ## Contacts
 - VK: https://vk.com/lunarelly
 - Telegram: t.me/ducxy
-- Discord: Lunarelly#4392
+- Discord: Lunarelly#0001
 - VK Group: https://vk.com/glowstonepe
 
 ## Licensing information
