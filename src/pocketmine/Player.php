@@ -13,8 +13,8 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * @author Glowstone (Lemdy)
- * @link vk.com/weany
+ * @author Glowstone (Lunarelly)
+ * @link vk.com/lunarelly
  *
  */
 
