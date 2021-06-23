@@ -14,7 +14,7 @@
  * (at your option) any later version.
  *
  * @author Glowstone (Lunarelly)
- * @link vk.com/weany
+ * @link vk.com/lunarelly
  *
  */
 
