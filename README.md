@@ -6,7 +6,8 @@
 - Download PHP 7 libaries
 - Download git
 - Clone via command: git clone https://github.com/Lunarelly/Glowstone
-- Run via: ./start.sh
+- Run via: ./start.sh (Linux)
+- Run via: open start.cmd (Windows)
 
 ## Donate
 - QIWI: https://qiwi.com/n/LEMDY
