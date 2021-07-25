@@ -37,5 +37,9 @@
 - Discord: Lunarelly#0001
 - VK Group: https://vk.com/glowstonepe
 
+## TODO
+- 0.15 Support
+- Full inventory fix
+
 ## Licensing information
 Glowstone is not affiliated with Mojang. All brands and trademarks belong to their respective owners.
