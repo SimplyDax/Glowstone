@@ -11,6 +11,7 @@
 
 ## Donate
 - QIWI: https://qiwi.com/n/LEMDY
+- BTC: bc1qjcxpmy45kfgak6qncwzwrqpad0gvwv5eq4act6
 
 ## Information
 - Minecraft PE version: 0.14.x
