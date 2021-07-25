@@ -21,22 +21,18 @@
 
 namespace pocketmine\network\protocol;
 
-class ItemFrameDropItemPacket extends DataPacket{
 
-	const NETWORK_ID = Info::ITEM_FRAME_DROP_ITEM_PACKET;
+class ChunkRadiusUpdatedPacket extends DataPacket{
+	const NETWORK_ID = Info::CHUNK_RADIUS_UPDATED_PACKET;
 
-	public $x;
-	public $y;
-	public $z;
-	public $dropItem;
+	public $radius;
 
 	public function decode(){
-		$this->z = $this->getInt();
-		$this->y = $this->getInt();
-		$this->x = $this->getInt();
-		$this->dropItem = $this->getSlot();
+
 	}
 
 	public function encode(){
+		$this->reset();
+		$this->putInt($this->radius);
 	}
 }
