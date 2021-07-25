@@ -33,7 +33,7 @@
 
 ## Contacts
 - VK: https://vk.com/lunarelly
-- Telegram: t.me/ducxy
+- Telegram: https://t.me/lunarellyy
 - Discord: Lunarelly#0001
 - VK Group: https://vk.com/glowstonepe
 
