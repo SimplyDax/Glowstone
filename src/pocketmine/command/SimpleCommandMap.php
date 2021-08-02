@@ -13,23 +13,49 @@
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * @author Glowstone (Lemdy)
+ * @author Glowstone (Lunarelly)
  * @link vk.com/weany
  *
  */
 
 namespace pocketmine\command;
 
+use pocketmine\command\defaults\BanCommand;
+use pocketmine\command\defaults\BanIpCommand;
+use pocketmine\command\defaults\DefaultGamemodeCommand;
+use pocketmine\command\defaults\DeopCommand;
+use pocketmine\command\defaults\DifficultyCommand;
+use pocketmine\command\defaults\EffectCommand;
+use pocketmine\command\defaults\EnchantCommand;
 use pocketmine\command\defaults\GamemodeCommand;
+use pocketmine\command\defaults\GiveCommand;
+use pocketmine\command\defaults\HelpCommand;
+use pocketmine\command\defaults\KickCommand;
+use pocketmine\command\defaults\KillCommand;
 use pocketmine\command\defaults\ListCommand;
+use pocketmine\command\defaults\OpCommand;
+use pocketmine\command\defaults\PardonCommand;
+use pocketmine\command\defaults\PardonIpCommand;
+use pocketmine\command\defaults\ParticleCommand;
+use pocketmine\command\defaults\PluginsCommand;
+use pocketmine\command\defaults\PingCommand;
+use pocketmine\command\defaults\ReloadCommand;
+use pocketmine\command\defaults\SaveCommand;
+use pocketmine\command\defaults\SaveOffCommand;
+use pocketmine\command\defaults\SaveOnCommand;
 use pocketmine\command\defaults\SayCommand;
 use pocketmine\command\defaults\SetWorldSpawnCommand;
+use pocketmine\command\defaults\SpawnpointCommand;
+use pocketmine\command\defaults\StatusCommand;
+use pocketmine\command\defaults\StopCommand;
 use pocketmine\command\defaults\TeleportCommand;
 use pocketmine\command\defaults\TellCommand;
 use pocketmine\command\defaults\TimeCommand;
-use pocketmine\command\defaults\PingCommand;
+use pocketmine\command\defaults\TimingsCommand;
+use pocketmine\command\defaults\VanillaCommand;
+use pocketmine\command\defaults\VersionCommand;
+use pocketmine\command\defaults\WhitelistCommand;
 use pocketmine\event\TranslationContainer;
-use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\utils\MainLogger;
 use pocketmine\utils\TextFormat;
@@ -50,18 +76,41 @@ class SimpleCommandMap implements CommandMap{
 	}
 
 	private function setDefaultCommands(){
-
+		$this->register("glowstone", new VersionCommand("version"));
+		$this->register("glowstone", new PluginsCommand("plugins"));
+		$this->register("glowstone", new HelpCommand("help"));
+		$this->register("glowstone", new StopCommand("stop"));
 		$this->register("glowstone", new TellCommand("tell"));
+		$this->register("glowstone", new DefaultGamemodeCommand("defaultgamemode"));
+		$this->register("glowstone", new BanCommand("ban"));
+		$this->register("glowstone", new BanIpCommand("ban-ip"));
+		$this->register("glowstone", new PardonCommand("pardon"));
+		$this->register("glowstone", new PardonIpCommand("pardon-ip"));
 		$this->register("glowstone", new SayCommand("say"));
 		$this->register("glowstone", new ListCommand("list"));
+		$this->register("glowstone", new DifficultyCommand("difficulty"));
+		$this->register("glowstone", new KickCommand("kick"));
+		$this->register("glowstone", new OpCommand("op"));
+		$this->register("glowstone", new DeopCommand("deop"));
+		$this->register("glowstone", new WhitelistCommand("whitelist"));
+		$this->register("glowstone", new SaveOnCommand("save-on"));
+		$this->register("glowstone", new SaveOffCommand("save-off"));
+		$this->register("glowstone", new SaveCommand("save-all"));
+		$this->register("glowstone", new GiveCommand("give"));
+		$this->register("glowstone", new EffectCommand("effect"));
+		$this->register("glowstone", new EnchantCommand("enchant"));
+		$this->register("glowstone", new ParticleCommand("particle"));
 		$this->register("glowstone", new GamemodeCommand("gamemode"));
+		$this->register("glowstone", new KillCommand("kill"));
+		$this->register("glowstone", new SpawnpointCommand("spawnpoint"));
 		$this->register("glowstone", new SetWorldSpawnCommand("setworldspawn"));
 		$this->register("glowstone", new TeleportCommand("tp"));
 		$this->register("glowstone", new TimeCommand("time"));
-		$this->register("glowstone", new PingCommand("ping"));
-
-	}
-
+		$this->register("glowstone", new TimingsCommand("timings"));
+		$this->register("glowstone", new ReloadCommand("reload"));
+   $this->register("glowstone", new StatusCommand("status"));
+   $this->register("glowstone", new PingCommand("ping"));
+ }
 
 	public function registerAll($fallbackPrefix, array $commands){
 		foreach($commands as $command){
@@ -114,50 +163,6 @@ class SimpleCommandMap implements CommandMap{
 		return true;
 	}
 
-	private function dispatchAdvanced(CommandSender $sender, Command $command, $label, array $args, $offset = 0){
-		if(isset($args[$offset])){
-			$argsTemp = $args;
-			switch($args[$offset]){
-				case "@a":
-					$p = $this->server->getOnlinePlayers();
-					if(count($p) <= 0){
-						$sender->sendMessage("§c» §fНикто не §eиграет §fна сервере!");
-					}else{
-						foreach($p as $player){
-							$argsTemp[$offset] = $player->getName();
-							$this->dispatchAdvanced($sender, $command, $label, $argsTemp, $offset + 1);
-						}
-					}
-					break;
-				case "@r":
-					$players = $this->server->getOnlinePlayers();
-					if(count($players) > 0){
-						$argsTemp[$offset] = $players[array_rand($players)]->getName();
-						$this->dispatchAdvanced($sender, $command, $label, $argsTemp, $offset + 1);
-					}
-					break;
-				case "@p":
-					if($sender instanceof Player){
-						$distance = 5;
-						$nearestPlayer = $sender;
-						foreach($sender->getLevel()->getPlayers() as $p){
-							if($p != $sender and (($dis = $p->distance($sender)) < $distance)){
-								$distance = $dis;
-								$nearestPlayer = $p;
-							}
-						}
-						if($distance != 5){
-							$argsTemp[$offset] = $nearestPlayer->getName();
-							$this->dispatchAdvanced($sender, $command, $label, $argsTemp, $offset + 1);
-						}else $sender->sendMessage("§c» §fИгроков §eпоблизости §fнету!");
-					}else $sender->sendMessage("§c» §fТолько для игроков!");
-					break;
-				default:
-					$this->dispatchAdvanced($sender, $command, $label, $argsTemp, $offset + 1);
-			}
-		}else $command->execute($sender, $label, $args);
-	}
-
 	public function dispatch(CommandSender $sender, $commandLine){
 		$args = explode(" ", $commandLine);
 
@@ -174,18 +179,11 @@ class SimpleCommandMap implements CommandMap{
 
 		$target->timings->startTiming();
 		try{
-			if($this->server->advancedCommandSelector){
-				$this->dispatchAdvanced($sender, $target, $sentCommandLabel, $args);
-			}else{
-				$target->execute($sender, $sentCommandLabel, $args);
-			}
+			$target->execute($sender, $sentCommandLabel, $args);
 		}catch(\Throwable $e){
 			$sender->sendMessage(new TranslationContainer(TextFormat::RED . "%commands.generic.exception"));
 			$this->server->getLogger()->critical($this->server->getLanguage()->translateString("pocketmine.command.exception", [$commandLine, (string) $target, $e->getMessage()]));
-			$logger = $sender->getServer()->getLogger();
-			if($logger instanceof MainLogger){
-				$logger->logException($e);
-			}
+			$sender->getServer()->getLogger()->logException($e);
 		}
 		$target->timings->stopTiming();
 
