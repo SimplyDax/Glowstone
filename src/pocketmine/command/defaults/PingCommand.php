@@ -44,7 +44,7 @@ class PingCommand extends VanillaCommand{
 			return true;
 		}
 
-		$sender->sendMessage("§a» §fPing: §a". $sender->getPing() ."ms");
+		$sender->sendMessage("Ping: ". $sender->getPing() ."ms");
 		return true;
 	}
 }
