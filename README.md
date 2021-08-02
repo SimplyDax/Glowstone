@@ -1,5 +1,5 @@
 <p align="center">
-	<b>Glowstone: Premium Minecraft: PE software</b>
+	<b>Glowstone: Premium Minecraft PE software</b>
 </p>
 
 ## Installation
