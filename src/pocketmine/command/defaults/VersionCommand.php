@@ -51,7 +51,7 @@ class VersionCommand extends VanillaCommand{
 				$sender->getServer()->getCodename(),
 				$sender->getServer()->getApiVersion(),
 				$sender->getServer()->getVersion(),
-				array(Info::ACCEPTED_PROTOCOLS)
+				Info::CURRENT_PROTOCOL
 			]));
 		}else{
 			$pluginName = implode(" ", $args);
