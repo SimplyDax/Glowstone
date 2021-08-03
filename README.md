@@ -30,6 +30,7 @@
 - Support 1-7 builds (beta)
 - Fixed 0.14.2 popup bug
 - Fixed armor
+- Fixed inventory hotbar
 
 ## Contacts
 - VK: https://vk.com/lunarelly
@@ -39,7 +40,6 @@
 
 ## TODO
 - 0.15 Support
-- Full inventory fix
 
 ## Licensing information
 Glowstone is not affiliated with Mojang. All brands and trademarks belong to their respective owners.
