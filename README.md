@@ -3,7 +3,7 @@
 </p>
 
 ## Installation
-- Download PHP 7 libaries
+- Download PHP 7 libaries (check releases)
 - Download git
 - Clone via command: git clone https://github.com/Lunarelly/Glowstone
 - Run via: ./start.sh (Linux)
