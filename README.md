@@ -22,7 +22,6 @@
 - Method "getPing()" returns player's ping
 - Method "getCPS()" returns player's clicks per second
 - Command "/ping" shows your ping
-- Anti-DoS protection (Flood UDP)
 - Less weight
 - Fast startup
 - Fixed some bugs
