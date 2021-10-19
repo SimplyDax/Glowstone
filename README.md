@@ -34,7 +34,7 @@
 ## Contacts
 - VK: https://vk.com/lunarelly
 - Telegram: https://t.me/lunarellyy
-- Discord: Lunarelly#0001
+- Discord: Lunarelly#6954
 - VK Group: https://vk.com/glowstonepe
 
 ## TODO
